@@ -64,6 +64,7 @@ onready var face = get_node("face")
 onready var anim = get_node("anim")
 
 func _ready():
+	
 	language = load_language(language)
 	
 	#defaults
@@ -134,6 +135,8 @@ func store_margins():
 
 func show_text(chapter, dialog, start_at=0):
 	
+	HUD.set_pause_mode(PAUSE_MODE_STOP)
+	get_tree().set_pause(true)
 	
 	textObj.set_bbcode("")
 	if start_at == null:      
@@ -303,14 +306,14 @@ func show_text(chapter, dialog, start_at=0):
 	emit_signal("finished")
 	beep_pitch = 1.0
 	self.hide()
-	
+	HUD.set_pause_mode(PAUSE_MODE_PROCESS)
+	get_tree().set_pause(false)
 	
 	
 	
 
 
 func question(answer_array):
-	print("STARTED QUESTION FUNCTION")
 	btn_answers = HButtonArray.new()
 	btn_answers.add_font_override("font", font)
 	btn_answers.add_style_override("normal", StyleBoxEmpty.new())

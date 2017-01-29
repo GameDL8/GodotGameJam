@@ -36,6 +36,7 @@ colors = ColorArray( 1, 1, 1, 1, 1, 1, 1, 0.921875, 1, 1, 1, 0 )
 
 [node name="chest" type="StaticBody2D"]
 
+process/pause_mode = 2
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )

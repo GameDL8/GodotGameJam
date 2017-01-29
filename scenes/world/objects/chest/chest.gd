@@ -51,11 +51,14 @@ func interact():
 			anim.play("open")
 			DIALOG.show_text("item","bomb")
 			p.set_fixed_process(false)
+			get_tree().set_pause(true)
 			yield(anim,"finished")
+			get_tree().set_pause(false)
 			icon.set_texture(null)
 			p.set_fixed_process(true)
 		else:
 			boom.current_stock += 4
+			icon.set_texture(texture_show)
 #			UPDATE HUD VALUE IF ITEM IS EQUIPPED	
 			if p.item_a == boom:
 				HUD.update_value(1,boom.current_stock)
@@ -64,10 +67,7 @@ func interact():
 			anim.play("open")
 		empty = true
 	elif content_type == SPECIAL:
-		if INVENTORY.has_node("btn_wireless_sword"):
-			pass
 		var item = special_btn.instance()
-
 		empty = true
 		if empty:
 			INVENTORY.add_item(item)
@@ -77,7 +77,9 @@ func interact():
 			MUSIC.start_play("got item")
 			anim.play("open")
 			p.set_fixed_process(false)
+			get_tree().set_pause(true)
 			yield(anim,"finished")
+			get_tree().set_pause(false)
 			icon.set_texture(null)
 			p.set_fixed_process(true)
 	elif content_type == HEART_PIECE:
@@ -86,12 +88,15 @@ func interact():
 		var p = Globals.get("player")
 		MUSIC.resume_dungeon_music(true)
 		MUSIC.start_play("got item")
-		INVENTORY.add_heart_piece(2)
 		anim.play("open")
-		p.set_fixed_process(false)
-		yield(anim,"finished")
+		INVENTORY.add_heart_piece(2)
+		if anim.is_playing():
+			p.set_fixed_process(false)
+			get_tree().set_pause(true)
+			yield(anim,"finished")
+			get_tree().set_pause(false)
+			p.set_fixed_process(true)
 		icon.set_texture(null)
-		p.set_fixed_process(true)
 		
 	else:
 		get_node("lid").set_texture(preload("res://scenes/world/objects/chest/sprite_by_hc/chest_lid.png"))

@@ -48,7 +48,7 @@ func throw():
 
 
 func _fixed_process(delta):
-	if (player.state == player.STATE_GRAB || player.state == player.STATE_PULL) and not tween.is_active():
+	if (player.state == player.STATE_GRAB || player.state == player.STATE_PULLING) and not tween.is_active():
 		if pull_dir.x != 0:
 			if (pull_dir.x > 0 and player.dir.x > 0) or (pull_dir.x < 0 and player.dir.x < 0):
 				pull_acum += delta

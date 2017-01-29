@@ -209,7 +209,7 @@
        x2="327.04724"
        y2="455.68109"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.52585207,0,0,0.52585207,175.87956,249.75058)" />
+       gradientTransform="matrix(0.52585207,0,0,0.52585207,337.09989,-35.920525)" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -218,9 +218,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2"
-     inkscape:cx="68.311303"
-     inkscape:cy="82.610967"
+     inkscape:zoom="1"
+     inkscape:cx="119.79215"
+     inkscape:cy="-25.396535"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -572,21 +572,21 @@
        id="rect4202"
        width="64.679802"
        height="89.9207"
-       x="339.70731"
-       y="481.2207"
+       x="500.92764"
+       y="195.54959"
        ry="0.52799755" />
     <rect
        style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:14.0880003;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.60784314"
        id="rect4215"
        width="8.9394855"
        height="27.081381"
-       x="354.56262"
-       y="500.94016"
+       x="515.78296"
+       y="215.26904"
        ry="0.52799755" />
     <rect
        ry="0.52799755"
-       y="500.94016"
-       x="379.54059"
+       y="215.26904"
+       x="540.76093"
        height="27.081381"
        width="8.9394855"
        id="rect4217"
@@ -595,13 +595,22 @@
        style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:14.0880003;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.60784314"
        id="path4219"
        sodipodi:type="arc"
-       sodipodi:cx="-371.52133"
-       sodipodi:cy="-550.3703"
+       sodipodi:cx="-532.74164"
+       sodipodi:cy="-264.69919"
        sodipodi:rx="12.883375"
        sodipodi:ry="12.883375"
        sodipodi:start="0"
        sodipodi:end="3.1415927"
-       d="m -358.63796,-550.3703 a 12.883375,12.883375 0 0 1 -6.44168,11.15733 12.883375,12.883375 0 0 1 -12.88338,0 12.883375,12.883375 0 0 1 -6.44169,-11.15733 l 12.88338,0 z"
+       d="m -519.85826,-264.69919 a 12.883375,12.883375 0 0 1 -6.44169,11.15733 12.883375,12.883375 0 0 1 -12.88338,0 12.883375,12.883375 0 0 1 -6.44168,-11.15733 l 12.88337,0 z"
        transform="scale(-1,-1)" />
+    <circle
+       style="opacity:1;fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:#8f8f8f;stroke-width:8.82330418;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.60784314"
+       id="path4213"
+       cx="372.04721"
+       cy="526.18109"
+       r="42.514599"
+       inkscape:export-filename="/media/mariano/Documentos/proyectos/oracle_of_godot/scenes/characters/botctor/bullet.png"
+       inkscape:export-xdpi="14"
+       inkscape:export-ydpi="14" />
   </g>
 </svg>

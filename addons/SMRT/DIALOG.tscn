@@ -80,6 +80,7 @@ font/font = ExtResource( 7 )
 
 [node name="dialog" type="Patch9Frame"]
 
+process/pause_mode = 2
 anchor/right = 1
 anchor/bottom = 1
 rect/min_size = Vector2( 320, 64 )
@@ -108,6 +109,7 @@ dialog_frame_height = 4
 
 [node name="nextLine" type="TextureFrame" parent="."]
 
+editor/display_folded = true
 anchor/left = 1
 anchor/top = 1
 anchor/right = 1
@@ -199,3 +201,5 @@ custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = true
 bbcode/bbcode = "ABRAKADABRA"
 visible_characters = -1
+
+

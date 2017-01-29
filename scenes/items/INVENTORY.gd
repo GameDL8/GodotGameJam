@@ -16,7 +16,6 @@ func _ready():
 	set_process_input(true)
 
 func add_heart_piece(value):
-	print("running function")
 	if heart_pieces+value >= CONST.HEART_PARTS_NEEDED:
 		heart_pieces+=value
 		heart_pieces-=CONST.HEART_PARTS_NEEDED
@@ -25,12 +24,12 @@ func add_heart_piece(value):
 		player.health = player.max_health
 		HUD.generate_hearts(player)
 		DIALOG.show_text("single_text","You completed a heart, now your max health is increased!")
+		yield(DIALOG.get_node("dialog"),"finished")
 	else:
 		heart_pieces+=value
 		DIALOG.show_text("single_text",str("You got ",value," piece of heart. Get ",CONST.HEART_PARTS_NEEDED-heart_pieces, " more to increase your max health."))
-		
-		
-	
+		yield(DIALOG.get_node("dialog"),"finished")
+	return
 
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):

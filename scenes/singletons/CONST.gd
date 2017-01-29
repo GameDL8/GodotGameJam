@@ -4,3 +4,4 @@ extends Node
 
 const DEFAULT_DAMAGE = 2
 const HEART_PARTS_NEEDED = 4
+const BULLET_SPEED = 300
