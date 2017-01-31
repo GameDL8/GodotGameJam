@@ -7,6 +7,7 @@ const SLOT_B    = 2
 onready var panel = get_node("panel")
 onready var cursor = get_node("panel/cursor")
 var idx = 0
+var can_pause = false
 
 var heart_pieces = 0
 var off
@@ -35,7 +36,8 @@ func _input(event):
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().set_pause(!get_tree().is_paused())
 		set_process(get_tree().is_paused())
-		if get_tree().is_paused():
+		
+		if can_pause and get_tree().is_paused():
 			panel.show()
 		else:
 			panel.hide()

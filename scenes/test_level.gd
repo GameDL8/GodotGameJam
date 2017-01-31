@@ -8,3 +8,4 @@ func _ready():
 	DIALOG.fade(1)
 	MUSIC.start_play("dungeon")
 	MUSIC.resume_dungeon_music(true)
+	INVENTORY.can_pause = true

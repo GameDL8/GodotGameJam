@@ -154,8 +154,6 @@ texture_show = ExtResource( 12 )
 
 [node name="breakable_walls" type="Node2D" parent="."]
 
-editor/display_folded = true
-
 [node name="BreakableWall" parent="breakable_walls" instance=ExtResource( 13 )]
 
 transform/pos = Vector2( 2093, 748 )
