@@ -146,7 +146,6 @@ autostart = false
 transform/pos = Vector2( 3, 13 )
 frames = ExtResource( 5 )
 animation = "default"
-frame = 2
 centered = false
 
 [node name="anim" type="AnimationPlayer" parent="."]
@@ -199,3 +198,5 @@ custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode/enabled = true
 bbcode/bbcode = "ABRAKADABRA"
 visible_characters = -1
+
+

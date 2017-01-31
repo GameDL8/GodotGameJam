@@ -50,6 +50,11 @@ func _input(event):
 							item_a.use()
 					else:
 						item_a.use()
+				if item_a == null:
+					if ray_interact.get_collider() != null and ray_interact.get_collider().is_in_group("cracked_wall"):
+						DIALOG.show_text("objects","wall")
+				
+
 		if item_a != null && event.is_action_released("A"):
 			item_a.release()
 		if item_b != null && event.is_action_pressed("B"):
@@ -93,7 +98,7 @@ func _fixed_process(delta):
 					ray_interact.get_collider().push(delta,1,dir_facing.normalized())
 				elif mov.y != 0 and dir_facing.y != 0:
 					ray_interact.get_collider().push(delta,1,dir_facing.normalized())
-
+	
 func set_facing(new_dir):
 	sprite.set_texture(facing_textures[new_dir])
 	if new_dir == UP:

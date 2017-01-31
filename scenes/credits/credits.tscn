@@ -1,0 +1,160 @@
+[gd_scene load_steps=10 format=1]
+
+[ext_resource path="res://scenes/credits/credits.gd" type="Script" id=1]
+[ext_resource path="res://svg_art/logo.png" type="Texture" id=2]
+[ext_resource path="res://addons/SMRT/font/main_font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://fonts/ArcadeClassic.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://addons/SMRT/font/zig_____.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://svg_art/godot-engine.png" type="Texture" id=6]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+
+[sub_resource type="Animation" id=1]
+
+resource/name = "credits"
+length = 9.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("credits:rect/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 0, 0.5, 5.5, 5.9, 8.5, 9 ), "transitions":FloatArray( 1, 1, 1, 1, 1, 1 ), "update":0, "values":[ Vector2( 640, 160 ), Vector2( 0, 160 ), Vector2( 0, 160 ), Vector2( -640, 160 ), Vector2( -640, 160 ), Vector2( -1280, 160 ) ] }
+tracks/1/type = "value"
+tracks/1/path = NodePath("TextureFrame:visibility/opacity")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = { "times":FloatArray( 0, 0.3 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ 0.0, 1.0 ] }
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:visibility/opacity")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = { "times":FloatArray( 0, 0.3 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ 0.0, 1.0 ] }
+tracks/3/type = "value"
+tracks/3/path = NodePath("RichTextLabel2:visibility/opacity")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = { "times":FloatArray( 0, 0.3 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ 0.0, 1.0 ] }
+
+[sub_resource type="DynamicFont" id=3]
+
+font/size = 14
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 5 )
+fallback/0 = ExtResource( 4 )
+
+[node name="Panel" type="Panel"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 640.0
+margin/bottom = 480.0
+custom_styles/panel = SubResource( 2 )
+script/script = ExtResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/credits = SubResource( 1 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="TextureFrame" type="TextureFrame" parent="."]
+
+rect/scale = Vector2( 0.75, 0.75 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 97.0
+margin/top = 32.0
+margin/right = 655.0
+margin/bottom = 154.0
+texture = ExtResource( 2 )
+stretch_mode = 4
+
+[node name="credits" type="HBoxContainer" parent="."]
+
+rect/min_size = Vector2( 640, 140 )
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 160.0
+margin/right = 1920.0
+margin/bottom = 352.0
+alignment = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="credits"]
+
+rect/min_size = Vector2( 640, 0 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 640.0
+margin/bottom = 192.0
+custom_fonts/bold_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 3 )
+bbcode/enabled = true
+bbcode/bbcode = "[center][b]Created by GAMEDL8[/b][/center]\n\n[center][b]GameDL8 is:[/b][/center]\n[center]Mariano Suligoy @MarianoRGD\nand\nBruno SXS @brunosxs [/center]"
+visible_characters = -1
+
+[node name="RichTextLabel1" type="RichTextLabel" parent="credits"]
+
+rect/min_size = Vector2( 640, 0 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 640.0
+margin/bottom = 192.0
+custom_fonts/bold_font = ExtResource( 3 )
+custom_fonts/normal_font = SubResource( 3 )
+bbcode/enabled = true
+bbcode/bbcode = "[center][b]Special Thanks:[/b][/center]\n[center]Dimbo font BY Jayvee Enaguas[/center]\n[center]http://harvettfox96.deviantart.com/[/center]\n\n[center]Zig font BY TEPID MONKEY FONTS[/center]\n[center]http://www.tepidmonkey.com/[/center]"
+visible_characters = -1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+
+rect/min_size = Vector2( 300, 0 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 37.0
+margin/top = 384.0
+margin/right = 337.0
+margin/bottom = 524.0
+custom_fonts/bold_font = ExtResource( 3 )
+custom_fonts/normal_font = ExtResource( 3 )
+bbcode/enabled = true
+bbcode/bbcode = "Made with the \nawesome opensource"
+visible_characters = -1
+
+[node name="Sprite" type="Sprite" parent="."]
+
+transform/pos = Vector2( 476.5, 394 )
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+
+
