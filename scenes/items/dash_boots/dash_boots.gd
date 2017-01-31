@@ -8,6 +8,10 @@ export (int) var current_stock
 
 onready var particles = get_node("particles")
 
+func _init():
+	Globals.set("dash_boots",self)
+	DIALOG.show_text("item","boots")
+
 func use():
 	if player == null:
 		player = Globals.get("player")

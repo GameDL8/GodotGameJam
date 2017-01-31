@@ -16,6 +16,7 @@ onready var tween = Tween.new()
 
 func _init():
 	Globals.set("crane_arm",self)
+	DIALOG.show_text("item","crane")
 
 func _ready():
 	add_child(tween)
