@@ -76,9 +76,9 @@ autostart = true
 
 [node name="shoot_timer" type="Timer" parent="."]
 
-process_mode = 0
-wait_time = 1.0
-one_shot = true
+process_mode = 1
+wait_time = 2.0
+one_shot = false
 autostart = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -93,8 +93,6 @@ transform/scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 
 [node name="item_container" type="Node2D" parent="."]
-
-editor/display_folded = true
 
 [node name="attack_trigger" type="Area2D" parent="item_container"]
 

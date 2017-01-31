@@ -115,7 +115,7 @@ transform/pos = Vector2( 0, -16 )
 transform/scale = Vector2( 1.5, 1.5 )
 texture = SubResource( 6 )
 region = true
-region_rect = Rect2( 0, 0, 33, 48 )
+region_rect = Rect2( 33, 0, 33, 48 )
 
 [node name="anim" type="AnimationPlayer" parent="."]
 
@@ -173,6 +173,6 @@ script/script = ExtResource( 3 )
 playback/process_mode = 1
 base_path = NodePath("..")
 master_player = NodePath("../anim")
-data = { "active":false, "connections":[ "state_3", "speed", 0, "speed", "out", 0, "anim", "state_1", 0, "anim 4", "state_1", 1, "state_2", "state_3", 0, "anim 2", "state_3", 1, "state_1", "state_2", 0, "anim 3", "state_2", 1 ], "master":NodePath("../anim"), "nodes":[ { "id":"speed", "pos":Vector2( 641, 123 ), "scale":1.0, "type":"timescale" }, { "filter":[  ], "from":"walk", "id":"anim", "pos":Vector2( 98, 5 ), "type":"animation" }, { "id":"out", "pos":Vector2( 790, 76 ), "type":"output" }, { "filter":[  ], "from":"push", "id":"anim 3", "pos":Vector2( 89, 200 ), "type":"animation" }, { "filter":[  ], "from":"carry", "id":"anim 4", "pos":Vector2( 95, 101 ), "type":"animation" }, { "blend":0.0, "filter":[  ], "id":"state_1", "pos":Vector2( 258, 14 ), "type":"blend2" }, { "blend":0.0, "filter":[  ], "id":"state_3", "pos":Vector2( 519, 124 ), "type":"blend2" }, { "filter":[  ], "from":"pull", "id":"anim 2", "pos":Vector2( 83, 291 ), "type":"animation" }, { "blend":0.0, "filter":[  ], "id":"state_2", "pos":Vector2( 401, 89 ), "type":"blend2" } ] }
+data = { "active":false, "connections":[ "state_3", "speed", 0, "speed", "out", 0, "anim", "state_1", 0, "anim 4", "state_1", 1, "state_2", "state_3", 0, "anim 2", "state_3", 1, "state_1", "state_2", 0, "anim 3", "state_2", 1 ], "master":NodePath("../anim"), "nodes":[ { "id":"speed", "pos":Vector2( 641, 123 ), "scale":1.0, "type":"timescale" }, { "filter":[  ], "from":"walk", "id":"anim", "pos":Vector2( 92, 7 ), "type":"animation" }, { "id":"out", "pos":Vector2( 790, 76 ), "type":"output" }, { "blend":0.0, "filter":[  ], "id":"state_1", "pos":Vector2( 258, 14 ), "type":"blend2" }, { "blend":0.0, "filter":[  ], "id":"state_3", "pos":Vector2( 519, 124 ), "type":"blend2" }, { "filter":[  ], "from":"pull", "id":"anim 2", "pos":Vector2( 83, 291 ), "type":"animation" }, { "blend":0.0, "filter":[  ], "id":"state_2", "pos":Vector2( 401, 89 ), "type":"blend2" }, { "filter":[  ], "from":"carry", "id":"anim 4", "pos":Vector2( 95, 101 ), "type":"animation" }, { "filter":[  ], "from":"push", "id":"anim 3", "pos":Vector2( 89, 200 ), "type":"animation" } ] }
 
 
