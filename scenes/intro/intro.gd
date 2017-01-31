@@ -3,8 +3,10 @@ var text
 var logo
 var anim
 const DEFAULT_SPEED = 0.5
+var play_music = false
+func _init():
+	pass
 func _ready():
-	MUSIC.start_play("intro")
 	HUD.hide()
 	connect("exit_tree", self, "end_intro")
 	text = get_node("RichTextLabel")
@@ -16,6 +18,9 @@ func _ready():
 	pass
 
 func _fixed_process(delta):
+	if not play_music:
+		play_music = true
+		MUSIC.start_play("intro")
 	if anim.get_current_animation() == "Roll":
 		if Input.is_action_pressed("A"):
 			anim.seek(anim.get_current_animation_length(), true)

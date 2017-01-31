@@ -59,12 +59,12 @@ tracks/1/type = "value"
 tracks/1/path = NodePath("TextureFrame:rect/pos")
 tracks/1/interp = 1
 tracks/1/imported = false
-tracks/1/keys = { "times":FloatArray( 0, 2, 3.5 ), "transitions":FloatArray( 1, 1, 1 ), "update":0, "values":[ Vector2( 33, 160 ), Vector2( 33, 160 ), Vector2( 97, 32 ) ] }
+tracks/1/keys = { "times":FloatArray( 0, 1.5, 3 ), "transitions":FloatArray( 1, 1, 1 ), "update":0, "values":[ Vector2( 33, 160 ), Vector2( 33, 160 ), Vector2( 97, 32 ) ] }
 tracks/2/type = "value"
 tracks/2/path = NodePath("TextureFrame:rect/scale")
 tracks/2/interp = 1
 tracks/2/imported = false
-tracks/2/keys = { "times":FloatArray( 2, 3.5 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( 1, 1 ), Vector2( 0.75, 0.75 ) ] }
+tracks/2/keys = { "times":FloatArray( 1.5, 3 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ Vector2( 1, 1 ), Vector2( 0.75, 0.75 ) ] }
 
 [node name="Panel" type="Panel"]
 
@@ -88,9 +88,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 80.0
-margin/top = -657.0
+margin/top = 482.0
 margin/right = 80.0
-margin/bottom = -312.0
+margin/bottom = -1451.0
 custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode/enabled = true
@@ -112,15 +112,15 @@ autoplay = ""
 
 [node name="TextureFrame" type="TextureFrame" parent="."]
 
-rect/scale = Vector2( 0.8, 0.8 )
+rect/scale = Vector2( 0.75, 0.75 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 84.2
-margin/top = 57.6
-margin/right = 642.2
-margin/bottom = 179.6
+margin/left = 97.0
+margin/top = 32.0
+margin/right = 655.0
+margin/bottom = 154.0
 texture = ExtResource( 2 )
 stretch_mode = 4
 

@@ -1,8 +1,13 @@
-[gd_resource type="TileSet" load_steps=3 format=1]
+[gd_resource type="TileSet" load_steps=4 format=1]
 
 [ext_resource path="res://svg_art/dungeon_walls.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 16, 16 )
+
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 16, 16 )
@@ -161,4 +166,12 @@ extents = Vector2( 16, 16 )
 18/navigation_offset = Vector2( 16, 16 )
 18/shape_offset = Vector2( 0, 0 )
 18/shapes = [  ]
+19/name = "dark_collideable"
+19/texture = ExtResource( 1 )
+19/tex_offset = Vector2( 0, 0 )
+19/region = Rect2( 192, 0, 32, 32 )
+19/occluder_offset = Vector2( 16, 16 )
+19/navigation_offset = Vector2( 16, 16 )
+19/shape_offset = Vector2( 16, 16 )
+19/shapes = [ SubResource( 2 ) ]
 

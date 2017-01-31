@@ -1,8 +1,13 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://svg_art/dungeon_walls.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 16, 16 )
+
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 16, 16 )
@@ -405,5 +410,32 @@ transform/pos = Vector2( 208.582, 80 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 192, 0, 32, 32 )
+
+[node name="dark_collideable" type="Sprite" parent="."]
+
+transform/pos = Vector2( 243.582, 80 )
+texture = ExtResource( 1 )
+modulate = Color( 0.796875, 0.796875, 0.796875, 1 )
+region = true
+region_rect = Rect2( 192, 0, 32, 32 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="dark_collideable"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dark_collideable/StaticBody2D"]
+
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
 
 

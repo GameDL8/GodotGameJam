@@ -12,6 +12,7 @@ var player
 export (int) var DAMAGE = CONST.DEFAULT_DAMAGE
 onready var patroll_timer = get_node("patroll_timer")
 onready var shoot_timer = get_node("shoot_timer")
+export(bool) var can_shoot = false
 func _init():
 	add_to_group("enemy")
 
@@ -52,8 +53,9 @@ func _fixed_process(delta):
 			else:
 				self.facing = UP
 				dir = Vector2(0,-1)
-		if abs(distance.x) < 10 or abs(distance.y) < 10: # Aligned, able to attack
-			shoot()
+		if can_shoot:
+			if abs(distance.x) < 10 or abs(distance.y) < 10: # Aligned, able to attack
+				shoot()
 
 func shoot():
 	set_fixed_process(false)

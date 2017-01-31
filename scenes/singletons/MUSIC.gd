@@ -1,7 +1,7 @@
 extends StreamPlayer
 
 var music = {
-"dungeon": preload("res://audio/music/intro.ogg"),
+"dungeon": preload("res://audio/music/Dungeon Excerpt.ogg"),
 "got item": preload("res://audio/music/Got item.ogg"),
 "intro": preload("res://audio/music/intro.ogg"),
 "uat": preload("res://audio/music/uat.ogg")

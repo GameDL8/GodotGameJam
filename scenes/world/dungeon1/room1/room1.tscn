@@ -1,16 +1,7 @@
-[gd_scene load_steps=13 format=1]
+[gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://scenes/world/room.gd" type="Script" id=1]
 [ext_resource path="res://tilesets/dungeon.tres" type="TileSet" id=2]
-[ext_resource path="res://scenes/world/objects/chest/chest.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/items/wireless_sword/btn_wireless_sword.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/items/crane_arm/btn_crane_arm.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/items/wired_sword/btn_wired_sword.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/items/dash_boots/btn_dash_boots.tscn" type="PackedScene" id=7]
-[ext_resource path="res://scenes/items/bomb/btn_bomb.tscn" type="PackedScene" id=8]
-[ext_resource path="res://scenes/items/bomb/icon.png" type="Texture" id=9]
-[ext_resource path="res://scenes/world/objects/vessel/vessel.tscn" type="PackedScene" id=10]
-[ext_resource path="res://scenes/characters/botctor/botctor.tscn" type="PackedScene" id=11]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
@@ -65,91 +56,11 @@ __meta__ = { "_edit_lock_":true }
 
 __meta__ = { "_edit_lock_":true }
 
-[node name="chest" parent="TileMap/chests" instance=ExtResource( 3 )]
-
-transform/pos = Vector2( 273, 208 )
-dialogs = null
-content_type = 3
-special_btn = ExtResource( 4 )
-
-[node name="chest4" parent="TileMap/chests" instance=ExtResource( 3 )]
-
-transform/pos = Vector2( 273, 416 )
-dialogs = null
-content_type = 3
-special_btn = ExtResource( 5 )
-
-[node name="chest1" parent="TileMap/chests" instance=ExtResource( 3 )]
-
-transform/pos = Vector2( 497, 416 )
-dialogs = null
-content_type = 3
-special_btn = ExtResource( 6 )
-
-[node name="chest2" parent="TileMap/chests" instance=ExtResource( 3 )]
-
-transform/pos = Vector2( 305, 576 )
-dialogs = null
-content_type = 3
-special_btn = ExtResource( 7 )
-
-[node name="chest3" parent="TileMap/chests" instance=ExtResource( 3 )]
-
-transform/pos = Vector2( 513, 304 )
-dialogs = null
-content_type = 2
-special_btn = ExtResource( 8 )
-texture_show = ExtResource( 9 )
-
-[node name="chest5" parent="TileMap/chests" instance=ExtResource( 3 )]
-
-transform/pos = Vector2( 453, 304 )
-dialogs = null
-content_type = 2
-special_btn = ExtResource( 8 )
-texture_show = ExtResource( 9 )
-
 [node name="vessels" type="Node2D" parent="TileMap"]
 
 transform/pos = Vector2( 1, 0 )
 __meta__ = { "_edit_lock_":true }
 
-[node name="vessel" parent="TileMap/vessels" instance=ExtResource( 10 )]
-
-transform/pos = Vector2( 368, 176 )
-
-[node name="vessel1" parent="TileMap/vessels" instance=ExtResource( 10 )]
-
-transform/pos = Vector2( 400, 176 )
-
-[node name="vessel2" parent="TileMap/vessels" instance=ExtResource( 10 )]
-
-transform/pos = Vector2( 592, 336 )
-
-[node name="vessel3" parent="TileMap/vessels" instance=ExtResource( 10 )]
-
-transform/pos = Vector2( 592, 368 )
-
-[node name="vessel4" parent="TileMap/vessels" instance=ExtResource( 10 )]
-
-transform/pos = Vector2( 176, 336 )
-
-[node name="vessel5" parent="TileMap/vessels" instance=ExtResource( 10 )]
-
-transform/pos = Vector2( 176, 368 )
-
-[node name="vessel6" parent="TileMap/vessels" instance=ExtResource( 10 )]
-
-transform/pos = Vector2( 368, 656 )
-
-[node name="vessel7" parent="TileMap/vessels" instance=ExtResource( 10 )]
-
-transform/pos = Vector2( 400, 656 )
-
 [node name="enemies" type="Node2D" parent="TileMap"]
-
-[node name="botctor" parent="TileMap/enemies" instance=ExtResource( 11 )]
-
-transform/pos = Vector2( 401, 352 )
 
 

@@ -49,6 +49,7 @@ func take_damage(amount, from):
 	if self == Globals.get("player"):
 		HUD.update_health(self)
 	can_take_damage = false
+	SFX.play("hit")
 	sprite.set_modulate(Color(0.8,0,0,1))
 	var recoil = (get_global_pos()-from.get_global_pos()).normalized()
 	var remaining = 0.2
